@@ -96,7 +96,7 @@ export default function Home() {
                                     experts focus on a tailored approach for
                                     each client. We dive into your brand's
                                     campaign goals, challenges, and we frame the
-                                    roadmap to the desired results.
+                                    roadmap to the desired results. 
                                 </h1>
                                 <h1 className="border-l-2 border-[#6100ff] pl-2">
                                     Competitor Analysis: We analyze relevant
