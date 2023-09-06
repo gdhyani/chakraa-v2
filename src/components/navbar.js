@@ -2,19 +2,36 @@
 import { useState } from "react";
 import { Cross as Hamburger } from "hamburger-react";
 import { BsArrowRight } from "react-icons/bs";
+import Link from "next/link";
+import Image from "next/image";
+
+const Pages = ["home", "about", "services", "brand", "influencer"];
+
 export default function Navbar() {
     const [isOpen, setOpen] = useState(false);
-
     return (
-        <div className="flex px-3 sm:px-0 justify-between max-w-7xl m-auto py-5 bg-black items-center">
-                <h1 className="text-4xl font-bold">chakraa</h1>
-            <div className="flex flex-row gap-4">
-                <button className="hidden sm:flex border rounded-3xl px-2 sm:px-4 py-0 flex-row items-center gap-1">
-                    Let's Talk
-                    <BsArrowRight className="sm:block hidden" size={25} />
+        <div className="flex px-3 sm:px-0  justify-between max-w-7xl m-auto py-5 bg-black items-center">
+            <h1 className="text-3xl gap-2 font-bold flex items-center">
+                <Image className="rounded-full" src="/logo.jpeg" width={50} height={50} alt="logo" />
+                Chakraa
+            </h1>
+            <div className="flex flex-row gap-7 text-white">
+                {Pages.map((el) => (
+                    <Link
+                        className="capitalize hover:bg-[#212121] rounded hover:opacity-100 transition-all py-1 px-3 font-bold opacity-70 text-lg"
+                        href="/"
+                        key={el}
+                    >
+                        {el}
+                    </Link>
+                ))}
+            </div>
+            <div className="flex flex-row gap-3">
+                <button className="px-5 py-1 transition-all hover:bg-white hover:text-black rounded bg-[#6100ff] font-semibold text-lg">
+                    Influencer
                 </button>
-                <button className="sm:border rounded-3xl px-3 py-0">
-                    <Hamburger toggled={isOpen} size={24} toggle={setOpen} />
+                <button className="px-10 py-1 border transition-all hover:bg-white hover:text-black rounded font-semibold text-lg">
+                    Brand
                 </button>
             </div>
         </div>
