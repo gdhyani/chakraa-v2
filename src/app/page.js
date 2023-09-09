@@ -1,15 +1,19 @@
+"use client"
+import Contact from "@/components/contact";
 import Faq from "@/components/faq";
 import Services from "@/components/services";
 import Testimo from "@/components/testimo";
 import Image from "next/image";
 import Link from "next/link";
+import { Link as SLink, animateScroll as scroll} from 'react-scroll'
+
 
 const services = [];
 
 export default function Home() {
     return (
         <main className="flex m-auto overflow-hidden flex-col">
-            <section className="flex max-w-7xl items-center mb-10 m-auto relative min-h-screen">
+            <section className="flex max-w-7xl items-center m-auto relative min-h-screen">
                 <video
                     className="absolute -z-50 overflow-y-hidden h-max -right-80 opacity-80"
                     loop
@@ -31,22 +35,23 @@ export default function Home() {
                         fullest market potential.
                     </h1>
                     <div className="flex flex-row gap-3">
-                        <button className="px-7 py-2 transition-all hover:bg-white hover:text-black rounded bg-[#6100ff] font-semibold text-lg">
-                            Influencer
-                        </button>
-                        <button className="px-12 py-2 border transition-all hover:bg-white hover:text-black rounded font-semibold text-lg">
-                            Brand
-                        </button>
+                    <SLink smooth={true} to='contact'  duration={1500} className="px-5 py-1 transition-all hover:bg-white hover:text-black rounded bg-[#6100ff] font-semibold text-lg">
+                    Influencer
+                </SLink>
+                <SLink smooth={true} to="contact" duration={1500} className="px-10 py-1 border transition-all hover:bg-white hover:text-black rounded font-semibold text-lg">
+                    Brand
+                </SLink>
                     </div>
                 </div>
             </section>
-
+            <section className="w-screen h-24 bg-white"></section>
             <section className="pt-10 min-h-screen  bg-black text-white">
                 <div className="flex flex-col-reverse max-w-7xl m-auto gap-40 pt-24 pb-40">
                     <div className="flex relative gap-5 overflow-hidden sm:flex-row flex-col">
                         <Image
                             className="absolute -left-80 overflow-hidden"
-                            src="/data.webp"
+                            // src="/data.webp"
+                            src="https://images.unsplash.com/photo-1501526029524-a8ea952b15be?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGRhdGF8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"
                             width={1000}
                             height={1000}
                             alt=""
@@ -76,7 +81,8 @@ export default function Home() {
                      <div className="flex relative gap-5 sm:flex-row-reverse flex-col overflow-hidden">
                         <Image
                             className="overflow-hidden sm:absolute -right-72"
-                            src="/data2.webp"
+                            // src="/data2.webp"
+                            src="https://images.unsplash.com/photo-1495592822108-9e6261896da8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGRhdGF8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"
                             width={1000}
                             height={1000}
                             alt=""
@@ -153,6 +159,7 @@ export default function Home() {
             <Services />
             <Testimo />
             <Faq/>
+            <Contact/>
         </main>
     );
 }

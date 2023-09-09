@@ -4,7 +4,7 @@ import { Cross as Hamburger } from "hamburger-react";
 import { BsArrowRight } from "react-icons/bs";
 import Link from "next/link";
 import Image from "next/image";
-
+import { Link as SLink, animateScroll as scroll} from 'react-scroll'
 const Pages = ["home", "about", "services", "brand", "influencer"];
 
 export default function Navbar() {
@@ -27,12 +27,12 @@ export default function Navbar() {
                 ))}
             </div>
             <div className="flex flex-row gap-3">
-                <button className="px-5 py-1 transition-all hover:bg-white hover:text-black rounded bg-[#6100ff] font-semibold text-lg">
+                <SLink smooth={true} to='contact'  duration={1500} className="px-5 py-1 transition-all hover:bg-white hover:text-black rounded bg-[#6100ff] font-semibold text-lg">
                     Influencer
-                </button>
-                <button className="px-10 py-1 border transition-all hover:bg-white hover:text-black rounded font-semibold text-lg">
+                </SLink>
+                <SLink smooth={true} to="contact" duration={1500} className="px-10 py-1 border transition-all hover:bg-white hover:text-black rounded font-semibold text-lg">
                     Brand
-                </button>
+                </SLink>
             </div>
         </div>
     );
