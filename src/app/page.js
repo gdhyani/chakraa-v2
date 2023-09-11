@@ -13,9 +13,9 @@ const services = [];
 export default function Home() {
     return (
         <main className="flex m-auto overflow-hidden flex-col">
-            <section className="flex max-w-7xl items-center m-auto relative min-h-screen">
+            <section className="flex px-3 sm:px-0 max-w-7xl items-center py-36 sm:py-0 m-auto relative sm:min-h-screen">
                 <video
-                    className="absolute -z-50 overflow-y-hidden h-max -right-80 opacity-80"
+                    className="sm:block hidden absolute -z-50 overflow-y-hidden h-max -right-80 opacity-80"
                     loop
                     muted
                     autoPlay
@@ -24,9 +24,9 @@ export default function Home() {
                     alt="vid"
                     src="/vid.mp4"
                 ></video>
-                <div className="flex  flex-col gap-8 z-10 w-2/5">
-                    <h1 className="text-7xl font-black">
-                        Reshape the world of Influencer Marketing.
+                <div className="flex flex-col gap-8 z-10 sm:w-2/5">
+                    <h1 className="sm:text-7xl text-6xl w-10/12 sm:w-auto font-black">
+                        Reshape the world of <span className="animate-text bg-gradient-to-r from-indigo-200 via-red-200 to-yellow-100 bg-clip-text text-transparent">Influencer Marketing</span>.
                     </h1>
                     <h1 className="">
                         Our vision is built on progressive technology, industry
@@ -45,11 +45,11 @@ export default function Home() {
                 </div>
             </section>
             <section className="w-screen h-24 bg-white"></section>
-            <section className="pt-10 min-h-screen  bg-black text-white">
-                <div className="flex flex-col-reverse max-w-7xl m-auto gap-40 pt-24 pb-40">
+            <section className="pt-10 px-3 sm:px-0 min-h-screen  bg-black text-white">
+                <div className="flex flex-col-reverse max-w-7xl m-auto gap-40 pt-24 pb-16 sm:pb-40">
                     <div className="flex relative gap-5 overflow-hidden sm:flex-row flex-col">
                         <Image
-                            className="absolute -left-80 overflow-hidden"
+                            className="sm:absolute -left-80 overflow-hidden"
                             // src="/data.webp"
                             src="https://images.unsplash.com/photo-1501526029524-a8ea952b15be?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGRhdGF8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"
                             width={1000}
@@ -122,7 +122,7 @@ export default function Home() {
             </section>
 
 
-            <section className="bg-white py-24 text-black ">
+            <section className="px-3 sm:px-0 bg-white py-24 text-black ">
                 <div className="flex flex-col text-center max-w-7xl m-auto">
                     <h1 className="text-7xl font-bold z-10">Platforms</h1>
                     <Image
@@ -133,7 +133,7 @@ export default function Home() {
                         alt="blog"
                     />
                     <h1 className="text-2xl opacity-80">We operates in</h1>
-                    <div className="my-20 flex flex-row m-auto w-4/6">
+                    <div className="my-20 scale-115 flex flex-row m-auto sm:w-4/6">
                         <Image
                             className="z-10"
                             src="/js.png"

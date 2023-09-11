@@ -76,7 +76,7 @@ const services = [
 export default function Services() {
     const [swiper, setSwiper] = useState(null);
     return (
-        <section className="bg-black min-h-screen text-white py-24">
+        <section className="bg-black min-h-screen px-3 sm:px-0 text-white py-24">
             <div className="relative max-w-7xl m-auto">
                 <Image
                     className="absolute -top-52 opacity-10"
@@ -88,12 +88,12 @@ export default function Services() {
                 <h1 className="text-7xl z-10 font-semibold">Services</h1>
                 <h1 className="text-2xl z-10 opacity-50">What we do</h1>
                 {/* <hr></hr> */}
-                <div className="flex md:flex-col flex-col-reverse reverse">
+                <div className="flex sm:flex-col flex-col-reverse reverse">
                     {/* buttons */}
-                    <div className="flex justify-end gap-5 mt-10 mr-20">
+                    <div className="flex justify-end gap-5 mt-10 sm:mr-20">
                         <button
                             onClick={() => swiper.slidePrev()}
-                            className="prevEl bg-white border-4 p-2 hover:bg-black rounded-full"
+                            className="prevEl hover:bg-white border-4 p-2 bg-black rounded-full"
                         >
                             <FiArrowLeft color="grey" size="50" />
                         </button>
@@ -119,7 +119,7 @@ export default function Services() {
                         }}
                         breakpoints={{
                             640: {
-                                slidesPerView: 1,
+                                slidesPerView: 2,
                                 spaceBetween: 20,
                             },
                             768: {
@@ -132,16 +132,16 @@ export default function Services() {
                             },
                         }}
                         modules={[Autoplay]}
-                        className="max-w-6xl mx-auto mt-10 mb-20 transition-all"
+                        className="max-w-6xl mx-auto mt-10 mb-10 sm:mb-20 transition-all"
                     >
                         {services.map((el) => (
                             <SwiperSlide
                                 className="group"
                                 key={services.indexOf(el) + 1}
                             >
-                                <div className="relative h-96 flex flex-col pb-5 justify-between">
+                                <div className="relative w-96 sm:w-auto h-96 flex flex-col pb-5 justify-between">
                                     <Image
-                                        className="opacity-30 group-hover:opacity-50 rounded-3xl object-cover w-full h-96"
+                                        className="sm:opacity-30 opacity-60 group-hover:opacity-50 rounded-3xl object-cover w-full h-96"
                                         src={el.url}
                                         alt=""
                                         width={1000}

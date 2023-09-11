@@ -28,11 +28,11 @@ const questions = [
 ];
 export default function Faq() {
     return (
-        <section className="bg-black min-h-screen text-white py-20">
+        <section className="bg-black px-3 sm:px-0 min-h-screen text-white py-20">
             <div className="max-w-7xl m-auto flex flex-col sm:flex-row">
-                <div className="w-6/12">
+                <div className="sm:w-6/12">
                     <h1 className="opacity-50 text-lg">FAQ</h1>
-                    <h1 className=" text-6xl font-bold">
+                    <h1 className="sm:text-7xl text-6xl font-bold">
                         Most frequently asked questions
                     </h1>
                     <Image
@@ -54,7 +54,7 @@ export default function Faq() {
                         </div>
                     </div>
                 </div>
-                <div className="w-1/2 px-5">
+                <div className="sm:w-1/2 mt-16 sm:mt-0 px-0 sm:px-5">
                     {/* accordian */}
                     <Accordion
                         motionProps={{

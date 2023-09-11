@@ -27,35 +27,43 @@ export default function ContactForm(props) {
                         selectedKey={selected}
                         onSelectionChange={setSelected}
                     >
-                        <Tab className="font-bold" key="influencer" title="Influencer">
+                        <Tab
+                            className="font-bold"
+                            key="influencer"
+                            title="Influencer"
+                        >
                             <form className="flex flex-col justify-between gap-4">
                                 <div className="flex flex-col gap-4">
-                                <Input
+                                    <Input
                                         isRequired
                                         variant="bordered"
                                         label="Name"
                                         type="text"
-                                    /><Input
-                                    isRequired
-                                    variant="bordered"
-                                    label="Social Media Handle"
-                                    type="text"
-                                /><Input
-                                isRequired
-                                variant="bordered"
-                                label="Followers"
-                                type="text"
-                            /><Input
-                            isRequired
-                            variant="bordered"
-                            label="Category"
-                            type="text"
-                        /><Input
-                        isRequired
-                        variant="bordered"
-                        label="City"
-                        type="text"
-                    />
+                                    />
+                                    <Input
+                                        isRequired
+                                        variant="bordered"
+                                        label="Social Media Handle"
+                                        type="text"
+                                    />
+                                    <Input
+                                        isRequired
+                                        variant="bordered"
+                                        label="Followers"
+                                        type="text"
+                                    />
+                                    <Input
+                                        isRequired
+                                        variant="bordered"
+                                        label="Category"
+                                        type="text"
+                                    />
+                                    <Input
+                                        isRequired
+                                        variant="bordered"
+                                        label="City"
+                                        type="text"
+                                    />
                                     <Input
                                         isRequired
                                         variant="bordered"
@@ -69,48 +77,66 @@ export default function ContactForm(props) {
                                         type="number"
                                         startContent={
                                             <div className="pointer-events-none flex items-center">
-                                              <span className="text-default-400 text-small">+91</span>
+                                                <span className="text-default-400 text-small">
+                                                    +91
+                                                </span>
                                             </div>
-                                          }
+                                        }
                                     />
                                 </div>
 
-                                <Button className="mt-7" variant="shadow" color="primary">
-                                    Get Started
-                                </Button>
+                                <Button
+                                        fullWidth
+                                        variant="shadow"
+                                        className="bg-[#6100ff] mt-7 text-white font-bold"
+                                    >
+                                        Get Started
+                                    </Button>
                             </form>
                         </Tab>
-                        <Tab className="font-semibold" key="brand" title="Brand">
+                        <Tab
+                            className="font-semibold"
+                            key="brand"
+                            title="Brand"
+                        >
                             <form className="flex flex-col gap-4 ">
-                            <Input
-                            isRequired
-                            variant="bordered"
-                            label="Brand Name"
-                            type="text"
-                        /><Input
-                        isRequired
-                        variant="bordered"
-                        label="Your Name"
-                        type="text"
-                    /><Input
-                    isRequired
-                    variant="bordered"
-                    label="Email"
-                    type="email"
-                /><Input
-                isRequired
-                variant="bordered"
-                label="Phone"
-                type="text"
-            /><Input
-            isRequired
-            variant="bordered"
-            label="Company Description"
-            type="text"
-        />
-                                
+                                <Input
+                                    isRequired
+                                    variant="bordered"
+                                    label="Brand Name"
+                                    type="text"
+                                />
+                                <Input
+                                    isRequired
+                                    variant="bordered"
+                                    label="Your Name"
+                                    type="text"
+                                />
+                                <Input
+                                    isRequired
+                                    variant="bordered"
+                                    label="Email"
+                                    type="email"
+                                />
+                                <Input
+                                    isRequired
+                                    variant="bordered"
+                                    label="Phone"
+                                    type="text"
+                                />
+                                <Input
+                                    isRequired
+                                    variant="bordered"
+                                    label="Company Description"
+                                    type="text"
+                                />
+
                                 <div className="flex gap-2 mt-7 justify-end">
-                                    <Button fullWidth variant="shadow" color="primary">
+                                    <Button
+                                        fullWidth
+                                        variant="shadow"
+                                        className="bg-[#6100ff] text-white font-bold"
+                                    >
                                         Get Started
                                     </Button>
                                 </div>
